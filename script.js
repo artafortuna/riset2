@@ -170,3 +170,14 @@ document.addEventListener("keydown", e => {
         if (e.shiftKey && ["i", "j", "c"].includes(e.key.toLowerCase())) e.preventDefault();
     }
 });
+
+// Memuat halaman Pengantar secara otomatis saat website pertama kali dibuka
+window.onload = function() {
+    // Mencari tombol navigasi pertama (Pengantar) yang ada di urutan ke-0
+    const tombolPengantar = document.querySelectorAll('.nav-btn')[0];
+    
+    // Memicu fungsi klik pada tombol tersebut secara otomatis
+    if (tombolPengantar) {
+        tombolPengantar.click();
+    }
+};
